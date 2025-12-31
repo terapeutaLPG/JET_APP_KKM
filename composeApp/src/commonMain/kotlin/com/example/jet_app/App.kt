@@ -18,6 +18,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 fun App() {
     MaterialTheme {
+        var message by remember { mutableStateOf("") }
         Column(
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.primaryContainer)
@@ -33,11 +34,14 @@ fun App() {
             Text(
                 text = "najlepszy wynik 0"
             )
-            Button(onClick = { }) {
+            Button(onClick = { message = "start gry" }) {
                 Text("start")
             }
             Button(onClick = { }) {
                 Text("instrukcja")
+            }
+            if (message.isNotEmpty()) {
+                Text(text = message)
             }
         }
     }
