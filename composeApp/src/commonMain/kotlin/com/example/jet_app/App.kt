@@ -37,7 +37,7 @@ fun App() {
             Button(onClick = { message = "start gry" }) {
                 Text("start")
             }
-            Button(onClick = { }) {
+            Button(onClick = { message = "instrukcja" }) {
                 Text("instrukcja")
             }
             if (message.isNotEmpty()) {
