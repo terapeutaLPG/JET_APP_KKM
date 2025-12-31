@@ -25,10 +25,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
+enum class Screen {
+    MENU,
+    GAME,
+    INSTRUCTIONS
+}
+
 @Composable
 @Preview
 fun App() {
     MaterialTheme {
+        var currentScreen by remember { mutableStateOf(Screen.MENU) }
         var message by remember { mutableStateOf("") }
         Box(
             modifier = Modifier
