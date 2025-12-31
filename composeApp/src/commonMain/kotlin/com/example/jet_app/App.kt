@@ -63,7 +63,7 @@ fun App() {
                 )
                 Spacer(modifier = Modifier.height(24.dp))
                 Button(
-                    onClick = { message = "start gry" },
+                    onClick = { currentScreen = Screen.GAME },
                     modifier = Modifier.width(200.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFF4CAF50)
@@ -78,7 +78,7 @@ fun App() {
                 }
                 Spacer(modifier = Modifier.height(12.dp))
                 Button(
-                    onClick = { message = "instrukcja" },
+                    onClick = { currentScreen = Screen.INSTRUCTIONS },
                     modifier = Modifier.width(200.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFF2196F3)
