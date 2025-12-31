@@ -36,6 +36,9 @@ fun App() {
             Button(onClick = { }) {
                 Text("start")
             }
+            Button(onClick = { }) {
+                Text("instrukcja")
+            }
         }
     }
 }
