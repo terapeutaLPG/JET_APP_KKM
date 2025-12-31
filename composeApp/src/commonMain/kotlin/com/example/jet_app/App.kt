@@ -29,6 +29,9 @@ fun App() {
                 fontSize = 48.sp,
                 fontWeight = FontWeight.Bold
             )
+            Text(
+                text = "najlepszy wynik 0"
+            )
         }
     }
 }
