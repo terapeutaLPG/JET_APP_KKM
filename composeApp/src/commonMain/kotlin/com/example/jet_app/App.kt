@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.safeContentPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -38,19 +39,29 @@ fun App() {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "najlepszy wynik 0"
+                text = "najlepszy wynik 0",
+                fontSize = 16.sp
             )
             Spacer(modifier = Modifier.height(24.dp))
-            Button(onClick = { message = "start gry" }) {
+            Button(
+                onClick = { message = "start gry" },
+                modifier = Modifier.width(200.dp)
+            ) {
                 Text("start")
             }
             Spacer(modifier = Modifier.height(8.dp))
-            Button(onClick = { message = "instrukcja" }) {
+            Button(
+                onClick = { message = "instrukcja" },
+                modifier = Modifier.width(200.dp)
+            ) {
                 Text("instrukcja")
             }
             if (message.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(16.dp))
-                Text(text = message)
+                Text(
+                    text = message,
+                    fontSize = 18.sp
+                )
             }
         }
     }
